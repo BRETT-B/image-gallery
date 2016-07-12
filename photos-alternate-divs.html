@@ -22,13 +22,40 @@
 			max-width: 100%;
 		}
 
-		#left{
+		#above{
+
+			/* My children are floating. I need to know how tall they are.  OVERFLOW */
+			
+			overflow: hidden;
+
+			/* Make me 75% so I dont take up the whole screen */
+			width: 75%;
+
+			/* Set margin to auto to make each side equal */
+			margin: auto;
+		}
+
+		.thumbnail{
+
 			width: 20%;
 			float: left;
+			box-sizing: border-box;
+
 		}
-		#right{
-			width: 60%;
-			float: left;
+
+		.one{
+			border: 5px red solid;
+
+		}
+
+		.two{
+
+
+		}
+		
+		.three{
+
+
 		}
 	</style>
 	
@@ -42,12 +69,25 @@
 			<h2>Image Gallery In HTML and CSS</h2>
 		</div>
 		<!-- Make the left hand column for our images to live in -->
-		<div id="left">
+		<div id="above">
+		<!-- Add a div to hold an image. Divs are nice b/c they are blocks; images are not nice b/c they are inline -->
+		<!-- Add the same class (thumbnail) for all, and/or unique class (one-five) to target individually -->
+			<div class="thumbnail one">
 			<img src="images/image1.jpg" onmousemove="largePic.src='images/image1.jpg'">
+			</div>
+			<div class="thumbnail two">
 			<img src="images/image2.jpg" onmousemove="largePic.src='images/image2.jpg'">
+			</div>
+			<div class="thumbnail three">
 			<img src="images/image3.jpg" onmousemove="largePic.src='images/image3.jpg'">
+			</div>
+			<div class="thumbnail four">
 			<img src="images/image4.jpg" onmousemove="largePic.src='images/image4.jpg'">
+			</div>
+			<div class="thumbnail five">
 			<img src="images/image5.jpg" onmousemove="largePic.src='images/image5.jpg'">
+			</div>
+
 		</div>	
 		<!-- Make the preview box on the right side -->
 		<div id="right">
